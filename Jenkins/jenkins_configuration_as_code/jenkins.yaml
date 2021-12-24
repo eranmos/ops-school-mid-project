@@ -1,0 +1,187 @@
+credentials:
+  system:
+    domainCredentials:
+    - credentials:
+      - basicSSHUserPrivateKey:
+          description: "jenkins.slave"
+          id: "jenkins.slave"
+          privateKeySource:
+            directEntry:
+              privateKey: "{AQAAABAAAAaQ8xUaMKMywdePSWYaxAUnQcxtwQ1KD6x0/imdabvq3FKF6i0hSjoiwUAXuC6s+dlt18MJliFe5jXa5LsJpYS2enydl9X8iXX4DnEkLShx2iDSA1vG62heK96wXhy8NkECckK89tw9/vR+7MOTpXMKgAgc96s1CJFYO8loO1D3/mVr3r4681rFElVBXNZksutFeeJzeqG3xWPskGXEhBtvZA/sgQXjw9fu6Q6/1z9ZDC2kMJV21M2qL0Ri3+An/Y/85VTzWZrU/+WMTbRVyeIqQeo2ZWFOQYDmt2F4vE0kMSYd0/UfhLHVPL5qrxUV7tSdXkaW+gndT4nEX9lRYdv0Qjo+6prVGuEbmJsNpag6GNDc72LZzL1p48APlAIGER6Mdp4OFyh/AfigsD0Yox7ptUJaSQirKkcrUX5EGoAMAZXRAk4upUJnzbiOAM3OEc+VKqR8FoF7tL+1R+KrchCutEaw4qjPXCL1h04fmb7yF6VXfcf3cGJfsa+NqLfJiDRgvlzLeaB4YE5IbAmQAGvJn184M/7LzGTIIEI2MZKtiRZV3OvUG1ErhuWlcI/I1oy0zpJPAf8WNQxyu1KuoKDmQRdNESk/ywSuu9IBuyw0EBuDFf6cruTRKYX5bPHuxZJiFFyMwtVDC9qYx/WPQ+cJXd02hmpaqUuivgUiLaoHu0u/uZ7IWSNlCf6Rbt+caKkPiUqFX6RqYq6czV4RhYLifMLCdNLiZ+KcIZtn7AYug6cJd8ciGTauJ1lQo5PmzKd5fjmPDslaWnNLa93j5yQPJfvIsC++H2q201UxbWRBNDdHPTFk0YiZSwfBPHwiA2+6EEkVSvZobf0djh4KJlof6kph5sXNLiEDWv6lTYaeUw0pg0kq+daNJPggQmbezN77VQTMYRLxCWFpuKlRFk3tzcNQlUebUu/QPsx+9VMMQbbziB4qK5X0JG6I0sZ5ctfApBRXcT8o113gtiUUZy1Lw8/4W4MoZJkbJeAYJ9kihMJ9aOCRNtOS0kE3jx/M2QM3EnKKAHGJQIMThmWQGY3UvgCLGEXSqNOlmQKEDBGLoU9e7Hzi/g/lU5ER6m4M0Juj14V1exXaJEl7GjbUMRSvhZJPwVegmqJr/bMHh02+rer8Pz9Q/uBF7+qXWDXiDnCHzoxquDYNyRxTHR6097c0ashJnGv73gxutDXueLsmb+vUdTdYF3Wt9SCweULUPJX1++uK25sqPzBN7OhWHc2RGb0Id8qZooWMUpcIaPQTPC1zqkwKgKuyEUOLANuYu0z4Y4suQmq5WJB2dLzJXYQyr6TaKUrXo5eN9cOlYHL0YzYFixGyLj+3PLwm9zwA7qlHo7BZZj+wMv1UjyZkQS/YsLgiZSzEgXRM5eFlrZMFXEPzhRLAEtoQBybxHppa0st6DRligNrtl3nhZxPXD291zMsEtHdKbRv0uGxLBw+mDUXTcQ5y1aIWRbkL7zptRgFe/eNuAdbbSh4MjIz6/vecnNKEXoVzY+bxjZdWDz2CUgmtv4M3to9zq2DRqx2Q3yGZiRQIUjud6bqbpSSB1NYBtPTyM+YqBupD2aoN5T7bGnkuKz0CeqxX0jo0YqpNnHCd0B8rVHGuECESU14WuPKUtD+lldKNVYWmFrCRHXoVTEPggvwQoMXuxbICjTz9gul8B52TUv26tBSp6bBluteyhujXD36bZ4oH8+uphf7f6JSPW+uLAKLIDgTH6ovyiqoNVrt9EEfTv5Dikv22P9i42hkUg8AX4ehS7tH/EtKxHDdhXQOPLdIrk664nl49nXKp2uhxufYBx83totCVHwjIbtE20SWL8i09zrX9O6KlulRHxx+5m/e2Cr3YO+2RQwiIIutsfvFLyBV107KQ8KVnLUiehDmwcV6PKK6qnnbSchwpgLFH5bx5wkSxordE18XprvyRrMVaJcnQ3AjzXxUKSvorJepIBoBQUDD3oBfdLOpTfEpKbZf/vcFvABF5VafkGjE96GZbCreVyfr5C24MReo4R6iWb4MJ54ICA8kFSnCf2K5vsy8uOeVOGzEg+FX2ZF0ntSYuYNYeOuvet+S4u8p1afUSYCFVNMNDqd5RT8Rg7HueOOFtTEbA1kEgEtM+KHixjsChZC7+huhI53S6wKQ4JYq/1Yu9Xcp7vlu5JKN8LEzquionNgD3EYYLLD1cKyfaS35f7CoOZOqKRnLdm2f6xjULZ7u+ab1xiXPWTcBQODGXObVAmxR03bslYcvwJupBs0phU+00oSTYbJOHYw==}"
+          scope: GLOBAL
+          username: "ec2-user"
+      - basicSSHUserPrivateKey:
+          description: "github.jenkins"
+          id: "github.jenkins"
+          privateKeySource:
+            directEntry:
+              privateKey: "{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}"
+          scope: GLOBAL
+          username: "eran.mosh@gmail.com"
+      - string:
+          description: "slack.eran-moshayov"
+          id: "slack.eran-moshayov"
+          scope: GLOBAL
+          secret: "{AQAAABAAAAAgnlP7vqyBHDxMUtK+XO6IGyTY5HlQcFcP26uVhFFKPY+JVKDDDrqKDjAEnpAsqf8z}"
+      - usernamePassword:
+          description: "Dockerhub account for Jenkins"
+          id: "dockerhub.erandocker"
+          password: "{AQAAABAAAAAw77mERvvxi+yNCMnxVXKCsEU+cHmhWZy0tyAKwaVh9l82N4R3Nn19/uwL8q/r9f+fKXGWRNqZDLSA9cejORTKWw==}"
+          scope: GLOBAL
+          username: "erandocker"
+      - usernamePassword:
+          description: "jenkins.slave.docker"
+          id: "jenkins.slave.docker"
+          password: "{AQAAABAAAAAQ+B5IWteCHLHco7i/sssqy6A//2Z7vfmP0Evz5Lxv+2k=}"
+          scope: GLOBAL
+          username: "jenkins"
+jenkins:
+  agentProtocols:
+  - "JNLP4-connect"
+  - "Ping"
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  disableRememberMe: false
+  disabledAdministrativeMonitors:
+  - "jenkins.diagnostics.ControllerExecutorsAgents"
+  - "jenkins.security.s2m.MasterKillSwitchWarning"
+  - "hudson.diagnosis.ReverseProxySetupMonitor"
+  labelAtoms:
+  - name: "built-in"
+  markupFormatter: "plainText"
+  mode: NORMAL
+  myViewsTabBar: "standard"
+  numExecutors: 2
+  primaryView:
+    all:
+      name: "all"
+  projectNamingStrategy: "standard"
+  quietPeriod: 5
+  remotingSecurity:
+    enabled: false
+  scmCheckoutRetryCount: 0
+  securityRealm:
+    local:
+      allowsSignup: false
+      enableCaptcha: false
+      users:
+      - id: "eranmos"
+        name: "Eran Moshayov"
+        properties:
+        - "apiToken"
+        - favoriting:
+            autofavoriteEnabled: true
+        - mailer:
+            emailAddress: "eran.mosh@gmail.com"
+        - "favorite"
+        - preferredProvider:
+            providerId: "default"
+  slaveAgentPort: 50000
+  systemMessage: "For support, contact DevOps team, eran.ops.school@gmail.com"
+  updateCenter:
+    sites:
+    - id: "default"
+      url: "https://updates.jenkins.io/update-center.json"
+  views:
+  - buildMonitor:
+      jobNames:
+      - "devops-assignment1-test"
+      - "DevOps-Creating-Nginx-Docker-Image"
+      - "devops-homework2-deploy-webapp"
+      name: "Ops-Schoo-View"
+      title: "Ops-Schoo-View"
+  - all:
+      name: "all"
+  viewsTabBar: "standard"
+globalCredentialsConfiguration:
+  configuration:
+    providerFilter: "none"
+    typeFilter: "none"
+security:
+  apiToken:
+    creationOfLegacyTokenEnabled: false
+    tokenGenerationOnCreationEnabled: false
+    usageStatisticsEnabled: true
+  sSHD:
+    port: -1
+unclassified:
+  artifactoryBuilder:
+    jfrogPipelinesServer:
+      bypassProxy: false
+      connectionRetries: 3
+      credentialsConfig:
+        ignoreCredentialPluginDisabled: true
+        overridingCredentials: false
+        password: "{AQAAABAAAAAQhR8nvHpFGg0FLYTol0O7r2Twte3DEi/aUSAykFiSW5M=}"
+        username: "****"
+      timeout: 300
+    useCredentialsPlugin: false
+  bitbucketEndpointConfiguration:
+    endpoints:
+    - bitbucketCloudEndpoint:
+        enableCache: false
+        manageHooks: false
+        repositoriesCacheDuration: 0
+        teamCacheDuration: 0
+  buildDiscarders:
+    configuredBuildDiscarders:
+    - "jobBuildDiscarder"
+  buildMonitorView:
+    permissionToCollectAnonymousUsageStatistics: true
+  defaultFolderConfiguration:
+    healthMetrics:
+    - worstChildHealthMetric:
+        recursive: true
+  fingerprints:
+    fingerprintCleanupDisabled: false
+    storage: "file"
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleForNormalize
+  gitHubPluginConfig:
+    configs:
+    - manageHooks: false
+    hookUrl: "https://jenkins.eran.website/github-webhook/"
+  gitSCM:
+    addGitTagAction: false
+    allowSecondFetch: false
+    createAccountBasedOnEmail: false
+    disableGitToolChooser: false
+    hideCredentials: false
+    showEntireCommitSummaryInChanges: false
+    useExistingAccountWithSameEmail: false
+  ivyBuildTrigger:
+    extendedVersionMatching: false
+  junitTestResultStorage:
+    storage: "file"
+  location:
+    adminAddress: "eran.ops.school@gmail.com"
+    url: "https://jenkins.eran.website/"
+  mailer:
+    charset: "UTF-8"
+    useSsl: false
+    useTls: false
+  mavenModuleSet:
+    localRepository: "default"
+  pollSCM:
+    pollingThreadCount: 10
+  slackNotifier:
+    botUser: false
+    room: "#jenkins-notifications"
+    sendAsText: false
+    teamDomain: "eran-moshayov"
+    tokenCredentialId: "slack.eran-moshayov"
+  subversionSCM:
+    workspaceFormat: 8
+  timestamper:
+    allPipelines: false
+    elapsedTimeFormat: "'<b>'HH:mm:ss.S'</b> '"
+    systemTimeFormat: "'<b>'HH:mm:ss'</b> '"
+tool:
+  git:
+    installations:
+    - home: "git"
+      name: "Default"
+  mavenGlobalConfig:
+    globalSettingsProvider: "standard"
+    settingsProvider: "standard"
