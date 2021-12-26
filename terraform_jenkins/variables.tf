@@ -30,14 +30,25 @@ locals {
 variable "jenkins_instance_type" {
   description = "The type of the ec2, for example - t2.medium"
   type        = string
-  default     = "t3.micro"
+  default     = "t3.small"
 }
 
-variable "jenkins_ami" {
+variable "jenkins_server_ami" {
   description = "The ami of the jenkins server"
   type        = string
   default     = "ami-01e5ad126c78fa17c"
 }
+
+#############  Jenkins Slave  #######
+variable "jenkins_slave_instances_count" {
+  description = "numbers of Jenkins slaves servers"
+  default     = "1"
+}
+
+variable "ubuntu_account_number" {
+  default = "099720109477"
+}
+
 #############  Route53  #############
 variable "aws_registered_domains" {
   description = "my aws registered domains "
