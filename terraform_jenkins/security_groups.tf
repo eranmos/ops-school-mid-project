@@ -27,6 +27,25 @@ resource "aws_security_group" "jenkins" {
     ]
   }
 
+## Port For Docker API
+  ingress {
+    from_port = 4243
+    to_port = 4243
+    protocol = "tcp"
+    cidr_blocks = [
+      "0.0.0.0/0"
+    ]
+  }
+
+  ## HostPort Range
+  ingress {
+    from_port = 32768
+    to_port = 60999
+    protocol = "tcp"
+    cidr_blocks = [
+      "0.0.0.0/0"
+    ]
+  }
   ingress {
     from_port = 22
     to_port = 22

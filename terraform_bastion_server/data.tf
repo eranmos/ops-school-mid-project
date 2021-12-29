@@ -39,15 +39,6 @@ data "aws_subnet" "public-us-east-1b" {
   }
 }
 
-data "aws_route53_zone" "my_aws_registered_domain" {
-  name = var.aws_registered_domains
-}
-
-data "aws_acm_certificate" "issued" {
-  domain   = "*.eran.website"
-  statuses = ["ISSUED"]
-}
-
 ########## Getting AMI's from publifc images  ##########
 data "aws_ami" "ubuntu-18" {
   most_recent = true

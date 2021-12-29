@@ -5,7 +5,7 @@
 #######   Jenkins-Server INSTANCES   ############
 
 resource "aws_instance" "jenkins-server" {
-  ami                         = var.jenkins_ami
+  ami                         = var.jenkins_server_ami
   instance_type               = var.jenkins_instance_type
   key_name                    = var.key_name
   subnet_id                   = data.aws_subnet.private-us-east-1a.id
@@ -15,7 +15,7 @@ resource "aws_instance" "jenkins-server" {
 
 
   tags = {
-    Name = "Jenkins Server"
+    Name = "Jenkins-Server"
     Owner = local.owner
     Environment = local.env_name
   }
