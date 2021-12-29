@@ -24,19 +24,10 @@ output "public-us-east-1b" {
   value = data.aws_subnet.public-us-east-1b.id
 }
 
-#Jenkins Server Info
-output "jenkins_server_private_dns_name" {
-  value = aws_instance.jenkins-server.*.private_dns
-}
-
-output "jenkins_server_private_ip_address" {
-  value = aws_instance.jenkins-server.*.private_ip
-}
-
 #####  Load Balancer info ########
-output "aws_jenkins_lb_public_dns" {
+output "aws_consul_lb_public_dns" {
   description = "print out lb DNS name"
-  value = aws_lb.jenkins.dns_name
+  value = aws_lb.consul.dns_name
 }
 
 #####  Route53 ########
@@ -49,7 +40,16 @@ output "my_aws_registered_domain_id" {
   value = data.aws_route53_zone.my_aws_registered_domain.id
 }
 
-output "jenkis_server_dns" {
-  description = "print my jenkins aws registered domain id"
-  value = aws_route53_record.jenkins-server.fqdn
+output "consul_server_dns" {
+  description = "print my consul aws registered domain id"
+  value       = aws_route53_record.consul-server.fqdn
+}
+
+##### consul servers info #########
+output "consul_server_private_address" {
+  value = aws_instance.consul-server.*.private_ip
+}
+
+output "consul_server_private_dns" {
+  value = aws_instance.consul-server.*.private_dns
 }

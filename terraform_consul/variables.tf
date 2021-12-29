@@ -12,41 +12,27 @@ variable "aws_cli_profile" {
   default = "ops-school"
 }
 
-#############  Jenkins Server  #############
+#############  Consul Server  #######
 variable "key_name" {
   description = "The key name of the Key Pair to use for the instance"
   type        = string
   default     = "eran-aws-linux"
 }
 
-locals {
-  jenkins_default_name = "jenkins"
-  jenkins_home = "/home/ubuntu/jenkins_home"
-  jenkins_home_mount = "${local.jenkins_home}:/var/jenkins_home"
-  docker_sock_mount = "/var/run/docker.sock:/var/run/docker.sock"
-  java_opts = "JAVA_OPTS='-Djenkins.install.runSetupWizard=false'"
+variable "consul_instances_count" {
+  description = "numbers of consul servers"
+  default     = "3"
 }
 
-variable "jenkins_instance_type" {
+variable "consul_instance_type" {
   description = "The type of the ec2, for example - t2.medium"
   type        = string
-  default     = "t3.small"
+  default     = "t2.micro"
 }
 
-variable "jenkins_server_ami" {
-  description = "The ami of the jenkins server"
-  type        = string
-  default     = "ami-01e5ad126c78fa17c"
-}
-
-#############  Jenkins Slave  #######
-variable "jenkins_slave_instances_count" {
-  description = "numbers of Jenkins slaves servers"
-  default     = "1"
-}
-
-variable "ubuntu_account_number" {
-  default = "099720109477"
+variable "ami" {
+  description = "ami (ubuntu 18) to use"
+  default = "ami-00ddb0e5626798373"
 }
 
 #############  Route53  #############
@@ -56,10 +42,10 @@ variable "aws_registered_domains" {
   default     = "eran.website"
 }
 
-variable "jenkins_dns" {
+variable "consul_dns" {
   description = "my aws registered domains "
   type        = string
-  default     = "jenkins.eran.website"
+  default     = "consul.eran.website"
 }
 
 #############
