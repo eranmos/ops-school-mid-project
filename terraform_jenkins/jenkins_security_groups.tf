@@ -19,6 +19,7 @@ resource "aws_security_group" "jenkins" {
   }
 
   ingress {
+    description = "Allow Jenkins UI from the world"
     from_port = 8080
     to_port = 8080
     protocol = "tcp"
@@ -27,8 +28,8 @@ resource "aws_security_group" "jenkins" {
     ]
   }
 
-## Port For Docker API
   ingress {
+    description = "Allow Docker Remote API port"
     from_port = 4243
     to_port = 4243
     protocol = "tcp"
@@ -37,8 +38,8 @@ resource "aws_security_group" "jenkins" {
     ]
   }
 
-  ## HostPort Range
   ingress {
+    description = "Allow Docker Hostport Range"
     from_port = 32768
     to_port = 60999
     protocol = "tcp"
@@ -47,6 +48,7 @@ resource "aws_security_group" "jenkins" {
     ]
   }
   ingress {
+    description = "Allow ssh from the world"
     from_port = 22
     to_port = 22
     protocol = "tcp"
@@ -70,7 +72,5 @@ resource "aws_security_group" "jenkins" {
     Name = local.jenkins_default_name
     Owner = local.owner
     Environment = local.env_name
-
-
   }
 }

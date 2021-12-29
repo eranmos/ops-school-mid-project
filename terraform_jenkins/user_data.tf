@@ -19,4 +19,5 @@ sudo systemctl enable docker
 sudo usermod -aG docker ubuntu
 mkdir -p ${local.jenkins_home}
 sudo chown -R 1000:1000 ${local.jenkins_home}
+USERDATA
 }
