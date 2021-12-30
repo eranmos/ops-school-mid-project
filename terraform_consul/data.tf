@@ -11,6 +11,13 @@ data "aws_vpc" "ops-school-prod-vpc" {
 }
 
 ########## Getting Subnets  ##########
+data "aws_subnet_ids" "private-subnets" {
+  vpc_id =data.aws_vpc.ops-school-prod-vpc.id
+  filter {
+    name   = "tag:Name"
+    values = ["ops-school-prod-vpc-private-*"]
+  }
+}
 
 data "aws_subnet" "private-us-east-1a" {
   filter {

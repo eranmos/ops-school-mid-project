@@ -9,7 +9,7 @@ resource "aws_instance" "consul-server" {
   ami                         = var.ami
   instance_type               = var.consul_instance_type
   key_name                    = var.key_name
-  subnet_id                   = data.aws_subnet.private-us-east-1a.id
+  subnet_id                   = data.aws_subnet_ids.private-subnets.ids
   iam_instance_profile        = data.aws_iam_instance_profile.consul_policy.name
   associate_public_ip_address = false
   vpc_security_group_ids      = [aws_security_group.consul-server.id]
