@@ -58,3 +58,7 @@ data "aws_ami" "ubuntu-18" {
     values = ["ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*"]
   }
 }
+
+data "aws_iam_instance_profile" "consul_policy" {
+  name   = "consul-join"
+}

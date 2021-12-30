@@ -49,3 +49,9 @@ data "aws_acm_certificate" "issued" {
   statuses = ["ISSUED"]
 }
 
+data "aws_iam_instance_profile" "consul_policy" {
+  name   = "consul-join"
+}
+
+
+

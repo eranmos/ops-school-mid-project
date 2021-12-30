@@ -36,7 +36,7 @@ variable "jenkins_instance_type" {
 variable "jenkins_server_ami" {
   description = "The ami of the jenkins server"
   type        = string
-  default     = "ami-01e5ad126c78fa17c"
+  default     = "ami-069b0f2ed11cb9ac8"
 }
 
 #############  Jenkins Slave  #######
@@ -60,6 +60,11 @@ variable "jenkins_dns" {
   description = "my aws registered domains "
   type        = string
   default     = "jenkins.eran.website"
+}
+
+variable "default_s3_bucket" {
+  description = "AWS EC2 Instance type"
+  default     = "eran-terraform-state-bucket"
 }
 
 #############

@@ -1,0 +1,17 @@
+---
+# handlers file for consul
+- name: restart dnsmasq
+  service:
+    name: dnsmasq
+    state: restarted
+
+- name: restart systemd resolved service
+  service:
+    name: systemd-resolved
+    state: restarted
+  
+- name: restart consul service
+  service:
+    name: consul.service
+    state: restarted
+  

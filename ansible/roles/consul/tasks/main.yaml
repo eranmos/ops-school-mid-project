@@ -1,0 +1,76 @@
+---
+- name: Install Dnsmasq and Unzip
+  package:
+    name: "{{ item }}"
+    state: present
+    update_cache: yes
+  loop:
+    - dnsmasq
+    - unzip
+
+- name: Set configuration file for Dnsmasq
+  template:
+    src: 10-consul.j2
+    dest: /etc/dnsmasq.d/10-consul
+  notify: restart dnsmasq
+  tags: dnsmasq
+
+- name: Set configuration file for resolve
+  template:
+    src: resolved.conf.j2
+    dest: /etc/systemd/resolved.conf
+  notify: restart systemd resolved service
+  
+- name: Unarchive consul zip file 
+  unarchive:
+    src: https://releases.hashicorp.com/consul/{{CONSUL_VERSION}}/consul_{{CONSUL_VERSION}}_linux_amd64.zip
+    dest: /tmp
+    remote_src: yes
+
+- name: copy consul file  and set permissions
+  copy:
+    src: /tmp/consul
+    dest: /usr/local/bin/consul
+    remote_src: yes
+    mode: +x
+
+- name: Ensure group consul exists
+  group:
+    name: consul
+    state: present
+
+- name: Create default consul user
+  user:
+    name: consul
+    group: consul
+    state: present
+
+- name: create directories for consul
+  file:
+    path: "{{ item }}"
+    state: directory
+    owner: consul
+    group: consul
+    mode: 0775
+  loop:
+    - /opt/consul
+    - /etc/consul.d
+    - /run/consul
+  
+- name: Set configuration file for config
+  template:
+    src: config.json.j2
+    dest: /etc/consul.d/config.json
+  notify: restart consul service
+
+- name: Set configuration file for consul service
+  template:
+    src: consul.service.j2
+    dest: /etc/systemd/system/consul.service
+  notify: restart consul service
+
+- name: start cosnul
+  systemd: 
+    state: started 
+    name:    consul 
+    daemon_reload: yes
