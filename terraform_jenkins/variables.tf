@@ -36,7 +36,7 @@ variable "jenkins_instance_type" {
 variable "jenkins_server_ami" {
   description = "The ami of the jenkins server"
   type        = string
-  default     = "ami-069b0f2ed11cb9ac8"
+  default     = "ami-0f7d632d727c62c37"
 }
 
 #############  Jenkins Slave  #######
