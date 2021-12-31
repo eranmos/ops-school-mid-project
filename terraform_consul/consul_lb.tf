@@ -47,10 +47,9 @@ resource "aws_lb_target_group" "consul-server" {
   }
 }
 
-/*
 resource "aws_lb_target_group_attachment" "consul_server" {
+  count = length(aws_instance.consul-server)
   target_group_arn = aws_lb_target_group.consul-server.arn
-  target_id        =  "${aws_instance.consul-server[count.index]}"
+  target_id        = aws_instance.consul-server[count.index].id
   port             = 8500
 }
-*/

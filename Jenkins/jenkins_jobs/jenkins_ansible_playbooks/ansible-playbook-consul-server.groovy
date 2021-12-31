@@ -13,6 +13,7 @@ pipeline {
             steps {
                 dir ("ansible/") {
                     sh "pwd"
+                    sh "ls -lhta"
                     sh "ansible-playbook consul_server.yaml"
                 }
             }
