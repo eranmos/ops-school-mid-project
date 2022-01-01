@@ -9,7 +9,7 @@ pipeline {
     }
 
     stages {
-        stage("Installing common PKG's on my Prod Env") {
+        stage("Installing consul server") {
             steps {
                 dir ("ansible/") {
                     sh "pwd"

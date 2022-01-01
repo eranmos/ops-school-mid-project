@@ -9,7 +9,7 @@ pipeline {
     }
 
     stages {
-        stage("Installing consul server") {
+        stage("provisioning servers") {
             steps {
                 dir ("ansible/") {
                     sh "pwd"
