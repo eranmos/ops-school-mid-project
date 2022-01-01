@@ -33,10 +33,10 @@ variable "jenkins_instance_type" {
   default     = "t3.small"
 }
 
-variable "jenkins_server_ami" {
+variable "jenkins_master_ami" {
   description = "The ami of the jenkins server"
   type        = string
-  default     = "ami-02c8c449b8639b987"
+  default     = "ami-0288b5b45bc12bbd8"
 }
 
 #############  Jenkins Slave  #######
