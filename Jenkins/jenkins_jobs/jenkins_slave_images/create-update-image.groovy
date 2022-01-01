@@ -51,7 +51,6 @@ pipeline {
             steps {
                 sh "docker rmi ${REGISTRY}/${IMAGE_NAME}:${IMAGE_TAG}"
                 sh "docker rmi ${REGISTRY}/${IMAGE_NAME}:latest"
-                "
             }
         }
     }
