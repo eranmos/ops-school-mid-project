@@ -17,6 +17,5 @@ resource "aws_instance" "bastion" {
     Name        = "bastion-server"
     Owner       = local.owner
     Environment = local.env_name
-    Project     = local.project
   }
 }
