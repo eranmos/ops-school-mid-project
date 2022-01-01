@@ -14,8 +14,9 @@ resource "aws_instance" "bastion" {
   user_data                   = local.bastion-server-instance-userdata
 
   tags = {
-    Name        = "Bastion-Server"
+    Name        = "bastion-server"
     Owner       = local.owner
     Environment = local.env_name
+    Project     = local.project
   }
 }

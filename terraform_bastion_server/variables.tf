@@ -35,12 +35,14 @@ variable "default_s3_bucket" {
 
 locals {
   bastion_default_name = "Bastion-Server"
-  env_name = "ops-school-prod"
-  owner = "Eran Moshayov"
+  env_name             = "ops-school-prod"
+  owner                = "Eran Moshayov"
+  project              = "kandula"
 
 
   common_tags = {
-    Owner = local.owner
+    Owner       = local.owner
     Environment = local.env_name
+    Project     = local.project
   }
 }

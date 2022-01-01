@@ -54,10 +54,12 @@ variable "consul_dns" {
 
 locals {
   env_name = "ops-school-prod"
-  owner = "Eran Moshayov"
+  owner    = "Eran Moshayov"
+  project  = "kandula"
 
   common_tags = {
-    Owner = local.owner
+    Owner       = local.owner
     Environment = local.env_name
+    Project     = local.project
   }
 }

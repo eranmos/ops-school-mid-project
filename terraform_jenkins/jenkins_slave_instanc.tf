@@ -17,10 +17,11 @@ resource "aws_instance" "jenkins-slave" {
 
 
   tags = {
-    Name = "Jenkins-Slave"
+    Name = "jenkins-slave"
     consul = "consul-agent"
     Owner = local.owner
     Environment = local.env_name
+    Project     = local.project
   }
 
 }

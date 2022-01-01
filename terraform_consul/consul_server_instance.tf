@@ -17,10 +17,11 @@ resource "aws_instance" "consul-server" {
 
 
   tags = {
-    Name = "Consul-Server${count.index+1}"
+    Name = "consul-server${count.index+1}"
     consul_server = "true"
     Owner = local.owner
     Environment = local.env_name
+    Project     = local.project
   }
 
 }
