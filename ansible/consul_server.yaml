@@ -3,7 +3,8 @@
 - name: apply consul server installation on my consul servers
   hosts: tag_consul_server_true
   become: yes
-
+  become_user: root
+  become_method: sudo
 
   roles:
     - consul
