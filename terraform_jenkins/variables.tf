@@ -36,7 +36,7 @@ variable "jenkins_instance_type" {
 variable "jenkins_server_ami" {
   description = "The ami of the jenkins server"
   type        = string
-  default     = "ami-01e5ad126c78fa17c"
+  default     = "ami-02c8c449b8639b987"
 }
 
 #############  Jenkins Slave  #######
@@ -62,16 +62,23 @@ variable "jenkins_dns" {
   default     = "jenkins.eran.website"
 }
 
+variable "default_s3_bucket" {
+  description = "AWS EC2 Instance type"
+  default     = "eran-terraform-state-bucket"
+}
+
 #############
 # LOCALS
 #############
 
 locals {
   env_name = "ops-school-prod"
-  owner = "Eran Moshayov"
+  owner    = "Eran Moshayov"
+  project  = "kandula"
 
   common_tags = {
-    Owner = local.owner
+    Owner       = local.owner
     Environment = local.env_name
+    Project     = local.project
   }
 }

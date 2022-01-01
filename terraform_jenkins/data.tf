@@ -11,6 +11,14 @@ data "aws_vpc" "ops-school-prod-vpc" {
 }
 
 ########## Getting Subnets  ##########
+data "aws_subnet_ids" "private-subnets" {
+  vpc_id =data.aws_vpc.ops-school-prod-vpc.id
+  filter {
+    name   = "tag:Name"
+    values = ["ops-school-prod-vpc-private-*"]
+  }
+}
+
 data "aws_subnet" "private-us-east-1a" {
   filter {
     name   = "tag:Name"
@@ -57,4 +65,8 @@ data "aws_ami" "ubuntu-18" {
     name   = "name"
     values = ["ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-*"]
   }
+}
+
+data "aws_iam_instance_profile" "consul_policy" {
+  name   = "consul-join"
 }

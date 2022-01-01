@@ -1,0 +1,8 @@
+- name: apply common server installation on all servers
+  hosts: tag_Project_kandula
+  remote_user: ubuntu
+  become: yes
+  become_user: root
+  become_method: sudo
+  roles:
+    - consul

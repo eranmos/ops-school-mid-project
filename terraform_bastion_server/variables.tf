@@ -28,14 +28,21 @@ variable "key_name" {
   default     = "eran-aws-linux"
 }
 
+variable "default_s3_bucket" {
+  description = "AWS EC2 Instance type"
+  default     = "eran-terraform-state-bucket"
+}
+
 locals {
   bastion_default_name = "Bastion-Server"
-  env_name = "ops-school-prod"
-  owner = "Eran Moshayov"
+  env_name             = "ops-school-prod"
+  owner                = "Eran Moshayov"
+  project              = "kandula"
 
 
   common_tags = {
-    Owner = local.owner
+    Owner       = local.owner
     Environment = local.env_name
+    Project     = local.project
   }
 }

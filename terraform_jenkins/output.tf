@@ -33,6 +33,15 @@ output "jenkins_server_private_ip_address" {
   value = aws_instance.jenkins-server.*.private_ip
 }
 
+#Jenkins Slave Info
+output "jenkins_slave_private_dns_name" {
+  value = aws_instance.jenkins-slave.*.private_dns
+}
+
+output "jenkins_slave_private_ip_address" {
+  value = aws_instance.jenkins-slave.*.private_ip
+}
+
 #####  Load Balancer info ########
 output "aws_jenkins_lb_public_dns" {
   description = "print out lb DNS name"
