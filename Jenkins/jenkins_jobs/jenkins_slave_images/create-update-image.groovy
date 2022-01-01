@@ -31,7 +31,7 @@ pipeline {
     stages {
         stage("Build Jenkins Slave Docker Image") {
             steps {
-                dir ("${env.IMAGE_NAME}") {
+                dir ("Jenkins/jenkins_jobs/jenkins_slave_images${env.IMAGE_NAME}") {
                     sh "pwd"
                     sh "ls -la"
                     sh "docker image build -t ${REGISTRY}/${IMAGE_NAME}:${IMAGE_TAG} -f Dockerfile ."
