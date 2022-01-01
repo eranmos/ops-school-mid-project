@@ -48,7 +48,7 @@ COPY .ansible_keys/id_rsa /home/jenkins/.ssh/id_rsa
 
 RUN chown -R jenkins:jenkins /home/jenkins/.m2/ && \
     chown -R jenkins:jenkins /home/jenkins/.ssh/ && \
-    chown jenkins:jenkins /home/jenkins/.ssh/id_rsa
+    chown jenkins:jenkins /home/jenkins/.ssh/id_rsa \
     chmod  400 /home/jenkins/.ssh/id_rsa
 
 # Standard SSH port
