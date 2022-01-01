@@ -17,7 +17,7 @@ resource "aws_instance" "jenkins-server" {
 
   tags = {
     Name = "jenkins-server"
-    consul = "consul-agent"
+    consul_server = "false"
     Owner = local.owner
     Environment = local.env_name
     Project     = local.project
