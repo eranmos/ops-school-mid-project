@@ -22,7 +22,7 @@ RUN apt-get update && \
     echo "jenkins:jenkins" | chpasswd && \
     mkdir /home/jenkins/.m2 && \
 # Install Docker
-    apt install docker.io -y
+    apt install docker.io -y && \
     usermod -aG docker jenkins
 
 #ADD settings.xml /home/jenkins/.m2/
