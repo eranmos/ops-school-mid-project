@@ -35,6 +35,7 @@ pipeline {
                     sh "pwd"
                     sh "ls -la"
                     sh "docker image build -t ${REGISTRY}/${IMAGE_NAME}:${IMAGE_TAG} -f Dockerfile ."
+                    sh "docker tag ${REGISTRY}/${IMAGE_NAME}:${IMAGE_TAG} ${REGISTRY}/${IMAGE_NAME}:latest"
                 }
             }
         }
