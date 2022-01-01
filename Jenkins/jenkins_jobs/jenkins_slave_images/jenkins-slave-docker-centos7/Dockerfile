@@ -42,8 +42,6 @@ RUN cd /opt && \
     chmod +x /opt/gradle-3.3/bin/gradle && \
     ln -s /opt/gradle-3.3/bin/gradle /usr/bin/gradle
 
-RUN mkdir -p /mnt/repository
-
 # Install a basic SSH server
 RUN yum install -y openssh-server && \
     ssh-keygen -A && \
