@@ -21,8 +21,6 @@ RUN apt-get update && \
 # Set password for the jenkins user (you may want to alter this).
     echo "jenkins:jenkins" | chpasswd && \
     mkdir /home/jenkins/.m2 && \
-# Install AWSCli
-    apt-get install awscli -y && \
 # Install Ansible
     apt-get install python-pip -y && \
     pip install botocore && \
