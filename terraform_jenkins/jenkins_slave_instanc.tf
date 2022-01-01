@@ -6,7 +6,7 @@
 
 resource "aws_instance" "jenkins-slave" {
   count                       = var.jenkins_slave_instances_count
-  ami                         = data.aws_ami.ubuntu-18.id
+  ami                         = var.jenkins_slave_ami
   instance_type               = var.jenkins_instance_type
   key_name                    = var.key_name
   subnet_id                   = data.aws_subnet.private-us-east-1b.id

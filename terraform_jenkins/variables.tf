@@ -45,6 +45,12 @@ variable "jenkins_slave_instances_count" {
   default     = "1"
 }
 
+variable "jenkins_slave_ami" {
+  description = "The ami of the jenkins server"
+  type        = string
+  default     = "ami-018d1e8f7f7d2a9e4"
+}
+
 variable "ubuntu_account_number" {
   default = "099720109477"
 }
