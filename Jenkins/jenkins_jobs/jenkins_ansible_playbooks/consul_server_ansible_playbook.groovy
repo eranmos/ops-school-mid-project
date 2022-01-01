@@ -9,12 +9,12 @@ pipeline {
     }
 
     stages {
-        stage("Installing consul server") {
+        stage("Installing common PKG's on my Prod Env") {
             steps {
                 dir ("ansible/") {
                     sh "pwd"
                     sh "ls -lhta"
-                    sh "ansible-playbook consul_server.yaml"
+                    sh "ansible-playbook common_ansible_playbook.yaml"
                 }
             }
         }

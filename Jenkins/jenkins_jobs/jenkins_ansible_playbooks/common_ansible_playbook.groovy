@@ -14,7 +14,7 @@ pipeline {
                 dir ("ansible/") {
                     sh "pwd"
                     sh "ls -lhta"
-                    sh "ansible-playbook consul_server.yaml"
+                    sh "ansible-playbook consul_server_ansible_playbook.yaml"
                 }
             }
         }
