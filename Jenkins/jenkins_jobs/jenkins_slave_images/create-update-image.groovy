@@ -43,12 +43,15 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: 'dockerhub.erandocker', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD')]) {
                     sh 'docker login -u $USERNAME -p $PASSWORD'
                     sh 'docker push ${REGISTRY}/${IMAGE_NAME}:${IMAGE_TAG}'
+                    sh 'docker push ${REGISTRY}/${IMAGE_NAME}:latest'
                 }
             }
         }
         stage('Cleaning up Docker image') {
             steps {
                 sh "docker rmi ${REGISTRY}/${IMAGE_NAME}:${IMAGE_TAG}"
+                sh "docker rmi ${REGISTRY}/${IMAGE_NAME}:latest"
+                "
             }
         }
     }
