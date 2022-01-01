@@ -15,7 +15,7 @@ properties([
 pipeline {
 
     agent {
-        label 'jenkins-slave'
+        label 'jankins-slave-ec2'
     }
 
     environment{
