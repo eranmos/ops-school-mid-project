@@ -1,22 +1,31 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kalandula
+  name: kandula
   annotations:
-    kubernetes.io/change-cause: "First release kalandula"
+    kubernetes.io/change-cause: "First release of kandula app"
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: kalandula
+      app: kandula-app
   template:
     metadata:
       labels:
-        app: kalandula
+        app: kandula-app
     spec:
       containers:
-        - name: kalandula
+        - name: kandula-app
           image: erandocker/ops-school-kandula:latest
+          env:
+            - name: FLASK_ENV
+              value: "development"
+            - name: AWS_ACCESS_KEY_ID
+              value: "AKIA4RKY7K77EJZZEGGI"
+            - name: AWS_SECRET_ACCESS_KEY
+              value: "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"
+            - name: AWS_DEFAULT_REGION
+              value: "us-east-1"
           ports:
             - containerPort: 5000
               name: http

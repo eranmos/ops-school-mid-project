@@ -2,14 +2,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: kalandula
+  name: kandula-app
 spec:
   selector:
-    app: kalandula
+    app: kandula-app
   type: LoadBalancer
   ports:
     - name: http
       port: 80
       targetPort: 5000
-      nodePort: 30037
       protocol: TCP

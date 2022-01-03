@@ -14,6 +14,13 @@ module "eks" {
     GithubRepo  = "terraform-aws-eks"
     GithubOrg   = "terraform-aws-modules"
   }
+  map_roles = [
+    {
+      rolearn  = data.aws_iam_instance_profile.consul_policy.arn
+      username = "system:node:{{EC2PrivateDNSName}}"
+      groups   = ["system:masters"]
+    }
+  ]
 
   vpc_id = data.aws_vpc.ops-school-prod-vpc.id
 

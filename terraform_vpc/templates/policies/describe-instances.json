@@ -5,6 +5,8 @@
       "Effect": "Allow",
       "Action": [
         "ec2:DescribeInstances",
+        "sts:AssumeRole",
+        "eks:DescribeCluster",
         "s3:*"
       ],
       "Resource": "*"
