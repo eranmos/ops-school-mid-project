@@ -10,7 +10,7 @@ properties([
 pipeline {
 
     agent {
-        label 'docker-ubuntu'
+        label 'jankins-slave-ec2'
     }
 
     environment{
