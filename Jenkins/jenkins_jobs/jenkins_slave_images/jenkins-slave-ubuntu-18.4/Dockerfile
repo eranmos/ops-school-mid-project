@@ -23,7 +23,17 @@ RUN apt-get update && \
     mkdir /home/jenkins/.m2 && \
 # Install Docker
     apt install docker.io -y && \
-    usermod -aG docker jenkins
+    usermod -aG docker jenkins && \
+# Install packages needed to use the Kubernetes apt repository:
+    apt-get install -y apt-transport-https ca-certificates curl && \
+# Download the Google Cloud public signing key:
+    curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg && \
+# Install packages needed to use the Kubernetes apt repository:
+    echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | tee /etc/apt/sources.list.d/kubernetes.list && \
+# Update apt package index with the new repository and install kubectl:
+    apt-get update && \
+    apt-get install -y kubectl && \
+
 
 #ADD settings.xml /home/jenkins/.m2/
 # Copy authorized keys

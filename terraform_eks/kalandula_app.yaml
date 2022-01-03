@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kalandula
+  annotations:
+    kubernetes.io/change-cause: "First release kalandula"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: kalandula
+  template:
+    metadata:
+      labels:
+        app: kalandula
+    spec:
+      containers:
+        - name: kalandula
+          image: erandocker/ops-school-kandula:latest
+          ports:
+            - containerPort: 5000
+              name: http
+              protocol: TCP
