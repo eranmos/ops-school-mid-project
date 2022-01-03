@@ -60,7 +60,7 @@ pipeline {
                                  apiVersion: apps/v1
                                  kind: Deployment
                                  metadata:
-                                   name: kanduka-app
+                                   name: kandula-app
                                    annotations:
                                      kubernetes.io/change-cause: "First release of kandula app"
                                  spec:
@@ -74,7 +74,7 @@ pipeline {
                                          app: kandula-app
                                      spec:
                                        containers:
-                                         - name: kandula
+                                         - name: kandula-app
                                            image: erandocker/ops-school-kandula:latest
                                            env:
                                              - name: FLASK_ENV
@@ -114,6 +114,8 @@ pipeline {
                     sh "pwd"
                     sh "ls -laht"
                     sh "kubectl apply -f kandula_lb.yaml"
+                    sh "sleep 20"
+                    sh " kubectl get services -o wide"
                 }
             }
         }
