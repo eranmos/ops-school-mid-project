@@ -36,7 +36,7 @@ variable "jenkins_instance_type" {
 variable "jenkins_master_ami" {
   description = "The ami of the jenkins server"
   type        = string
-  default     = "ami-0288b5b45bc12bbd8"
+  default     = "ami-0d00f21f2762d223e"
 }
 
 #############  Jenkins Slave  #######
@@ -48,7 +48,7 @@ variable "jenkins_slave_instances_count" {
 variable "jenkins_slave_ami" {
   description = "The ami of the jenkins server"
   type        = string
-  default     = "ami-018d1e8f7f7d2a9e4"
+  default     = "ami-08593e767ae130cbd"
 }
 
 variable "ubuntu_account_number" {
