@@ -32,8 +32,7 @@ RUN apt-get update && \
     echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | tee /etc/apt/sources.list.d/kubernetes.list && \
 # Update apt package index with the new repository and install kubectl:
     apt-get update && \
-    apt-get install -y kubectl && \
-
+    apt-get install -y kubectl
 
 #ADD settings.xml /home/jenkins/.m2/
 # Copy authorized keys
