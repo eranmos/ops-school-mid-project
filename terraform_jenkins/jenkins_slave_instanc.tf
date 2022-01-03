@@ -13,7 +13,7 @@ resource "aws_instance" "jenkins-slave" {
   iam_instance_profile        = data.aws_iam_instance_profile.consul_policy.name
   associate_public_ip_address = false
   vpc_security_group_ids      = [aws_security_group.jenkins.id]
-  user_data                   = local.jenkins-slave-instance-userdata
+#  user_data                   = local.jenkins-slave-instance-userdata
 
 
   tags = {

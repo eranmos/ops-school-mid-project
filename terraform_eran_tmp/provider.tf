@@ -1,10 +1,13 @@
 #############
 # Providers #
 #############
+
+#############  VPC Related  #############
 variable "aws_region" {
   default = "us-east-1"
 }
 
+#############  aws cli  #############
 variable "aws_cli_profile" {
   default = "ops-school"
 }
@@ -24,11 +27,10 @@ terraform {
   }
   backend "s3" {
     bucket  = "eran-terraform-state-bucket"
-    key     = "ops-school-prod/vpc/terraform.tfstate"
+    key     = "ops-school-prod/eran_tmp/terraform.tfstate"
     region  = "us-east-1"
     encrypt = true
     profile = "ops-school"
     #    dynamodb_table = "terraform-state-lock"
   }
 }
-
