@@ -14,6 +14,7 @@
 - [Prerequisites](#prerequisites)
 - [Deploying Instructions](#deploying-instructions)
 - [Variables References Table](#variables-references-table)
+- [Application Connections](#Application Connections (Data Flow))
 
 
 ## Features
