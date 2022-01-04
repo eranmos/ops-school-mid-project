@@ -125,3 +125,4 @@ Jenkins UI : https://jenkins.eran.website/
 + Creating EFS that will mount to Jenkins server & all Jenkins files will be stored on it
 + using [Jenkins Fleet Plugin](https://plugins.jenkins.io/ec2-fleet/) to deploy Jenkins Slaves
 + Moving all terraform deployments to terraform cloud on the same organization and link it to github
++ Creating DNS for Kandula (A record for) as https://kandule.eran.website that will be part of Kandula deployment
