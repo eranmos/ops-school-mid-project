@@ -12,8 +12,8 @@
 - [Prerequisites](#prerequisites)
 - [Deployment Instructions](#Deployment-Instructions)
 - [Application Connections](#Application-Connections)
-- [Links for dockerhub related images](#Links-for-dockerhub-related-images)
-- [Links for GitHub related repository](#Links-for-GitHub-related-repository)
+- [Links to dockerhub related images](#Links-to-dockerhub-related-images)
+- [Links to GitHub related repository](#Links-to-GitHub-related-repository)
 
 ## Infrastructure Architecture Diagram
 ![architecture_diagram](./ops_school_project_architecture_diagram.png)
@@ -27,7 +27,7 @@
 + Kandula App deployment on EKS cluster (Jenkins Job)
 
 ## Prerequisites
-To deploy all infrastructure you will need below application to be installed on your working station
+To deploy all infrastructure you will need below application to be installed on your workstation/server
  + Install [GIT](https://github.com/git-guides/install-git) on your workstation/server
  + Install [Terraform v1.1.2](https://learn.hashicorp.com/tutorials/terraform/install-cli) on your workstation/server
  + Install [aws cli](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) on your workstation/server
