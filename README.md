@@ -28,12 +28,19 @@
 
 ## Prerequisites
 To deploy all infrastructure you will need below application to be installed on your working station
- + Terraform application (version 1.1.2)
- + Git
+ + Install [GIT](https://github.com/git-guides/install-git) on your workstation/server
+ + Install [Terraform v1.1.2](https://learn.hashicorp.com/tutorials/terraform/install-cli) on your workstation/server
+ + Install [aws cli](https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2.html) on your workstation/server
+ + Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) on your workstation/server
 
 ## Deployment Instructions
 Infrastructure deployment will be performed via Terraform locally. 
 1. Terraform deployment is divided into five parts when the first execution must be VPC and the sequence of rest is not important
+   Run the following on each terrafom_XXX folder
+   ```bash
+   terraform init
+   terraform apply --auto-approve
+   ```
 + [Terraform-VPC](terraform_vpc) - Creating VPC
 + [Terraform-Jenkins](terraform_jenkins) - Creating Jenkins Master & Jenkins Slave (EC2 instance slave & cloud slaves)
 + [Terraform-Consul](/terraform_consul) - Creating Consul cluster without application (application will be installed via ansible playbook)
