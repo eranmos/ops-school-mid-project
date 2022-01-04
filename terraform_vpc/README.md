@@ -1,6 +1,6 @@
-<p align="center"><img width="250px" src="terraform_logo.png"></p>
+<p align="center"><img width="500px" src="terraform_vpc/terraform_logo.png"></p>
 
-<h1 align="center">Kandula</h1>
+<h1 align="center">Terraform VPC</h1>
 
 > An OpSchool Project for Cloud deployment.
 
