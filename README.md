@@ -13,7 +13,7 @@
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Deploying Instructions](#deploying-instructions)
-- [Application Connections-DataFlow](#Application Connections-DataFlow)
+- [Application Connections](#Application Connections)
 
 
 ## Features
@@ -22,7 +22,7 @@
 
 ## Deploying Instructions
 
-## Application Connections-DataFlow
+## Application Connections
 
 ### Jenkins Master :
 | Protocol | Port        | ingress/egress | Description                                                    |
