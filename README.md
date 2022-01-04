@@ -41,8 +41,8 @@ Infrastructure deployment will be performed via Terraform locally.
    terraform init
    terraform apply --auto-approve
    ```
-+ [Terraform-VPC](terraform_vpc) - Creating VPC
-+ [Terraform-Jenkins](terraform_jenkins) - Creating Jenkins Master & Jenkins Slave (EC2 instance slave & cloud slaves)
++ [Terraform-VPC](/terraform_vpc) - Creating VPC
++ [Terraform-Jenkins](/terraform_jenkins) - Creating Jenkins Master & Jenkins Slave (EC2 instance slave & cloud slaves)
 + [Terraform-Consul](/terraform_consul) - Creating Consul cluster without application (application will be installed via ansible playbook)
 + [Terraform-EKS](/terraform_eks) - Creating Kubernetes cluster with one worker group
 + [Terraform Bastion Server](/terraform_bastion_server) - Creating Bastion server for debugging & maintenance
