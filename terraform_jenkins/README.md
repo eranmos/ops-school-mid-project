@@ -48,6 +48,3 @@ In below table you can see `variables.tf` file details:
 | env_name | tag for your env name |
 | owner | tag for owner name |
 | project | tag for Project name |
-|  |  |
-|  |  |
-|  |  |
