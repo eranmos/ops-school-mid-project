@@ -1,8 +1,5 @@
+<p align="center"><img width="250px" src="./kandula.jpg"></p>
 
-![kubernetes!](./OpsSchool_really_small.png){}
-<p align="center"><img width="250px" src="./OpsSchool_really_small.png"></p>
-
-![image](./OpsSchool_really_small.png = 250x250)
 This Repo will aggregate my ops-school mid project
 
 ## Who am I
