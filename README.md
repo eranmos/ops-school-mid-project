@@ -14,6 +14,8 @@
 - [Application Connections](#Application-Connections)
 - [Links to dockerhub related images](#Links-to-dockerhub-related-images)
 - [Links to GitHub related repository](#Links-to-GitHub-related-repository)
+- [Improvement Points For The Future](#Improvement-points-for-the-future)
+
 
 ## Infrastructure Architecture Diagram
 ![architecture_diagram](./ops_school_project_architecture_diagram.png)
@@ -117,3 +119,9 @@ Jenkins UI : https://jenkins.eran.website/
 ### Links to GitHub related repository
 - [Terrafom VPC module](https://github.com/eranmos/ops-school-terraform-aws-vpc.git) - Terraform VPC module for AWS VPC, Subnets, Routing, NAT Gateway creation  
 - [Kandula Application](git@github.com:eranmos/ops-school-kandula-project-app.git) - Code for Kandule Application
+
+### Improvement Points For The Future
++ Creating Jenkins server & Slave AMI via packer
++ Creating EFS that will mount to Jenkins server & all Jenkins files will be stored on it
++ using [Jenkins Fleet Plugin](https://plugins.jenkins.io/ec2-fleet/) to deploy Jenkins Slaves
++ Moving all terraform deployments to terraform cloud on the same organization and link it to github
