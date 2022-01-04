@@ -11,6 +11,9 @@
 - [Prerequisites](#prerequisites)
 - [Deploying Instructions](#deploying-instructions)
 - [Application Connections](#Application-Connections)
+- [Project Terraform Deployments](#Project-Terraform-Deployments)
+- [Links for dockerhub related images](#Links-for-dockerhub-related-images)
+- [Links for GitHub related repository](#Links-for-GitHub-related-repository)
 
 ## Infrastructure architecture diagram
 ![architecture_diagram](./ops_school_project_architecture_diagram.png)
@@ -81,6 +84,6 @@
 - [Jenkins Slave Ubuntu-18.04](https://hub.docker.com/repository/docker/erandocker/jenkins-slave-ubuntu-18.4) - docker pull erandocker/jenkins-slave-ubuntu-18.4:tagname
 - [Jenkins Slave Centos-7](https://hub.docker.com/repository/docker/erandocker/jenkins-slave-docker-centos-7) - docker pull erandocker/jenkins-slave-docker-centos-7:tagname
 
-### Links for project related GitHub repository
+### Links for GitHub related repository
 - [Terrafom VPC module](https://github.com/eranmos/ops-school-terraform-aws-vpc.git) - Terraform VPC module for AWS VPC, Subnets, Routing, NAT Gateway creation  
 - [Kandula Application](git@github.com:eranmos/ops-school-kandula-project-app.git) - Code for Kandule Application
