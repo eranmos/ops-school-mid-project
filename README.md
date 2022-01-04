@@ -3,17 +3,21 @@
 
 <p align="center"><img width="250px" src="./kandula.jpg"></p>
 
+## Table of Contents
+
+- [Infrastructure architecture diagram](#Infrastructure-architecture-diagram)
+- [Application diagram](#Application-diagram)
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Deploying Instructions](#deploying-instructions)
+- [Application Connections](#Application-Connections)
+
 ## Infrastructure architecture diagram
 ![architecture_diagram](./ops_school_project_architecture_diagram.png)
 
 ## Application diagram
 ![app_diagram](./ops_school-project_app_diagram.png)
-## Table of Contents
 
-- [Features](#features)
-- [Prerequisites](#prerequisites)
-- [Deploying Instructions](#deploying-instructions)
-- [Application Connections](#Application-Connections)
 
 
 ## Features
