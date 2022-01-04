@@ -12,7 +12,6 @@
 - [Prerequisites](#prerequisites)
 - [Deployment Instructions](#Deployment-Instructions)
 - [Application Connections](#Application-Connections)
-- [Project Terraform Deployments](#Project-Terraform-Deployments)
 - [Links for dockerhub related images](#Links-for-dockerhub-related-images)
 - [Links for GitHub related repository](#Links-for-GitHub-related-repository)
 
@@ -39,7 +38,7 @@ Infrastructure deployment will be performed via Terraform locally.
 + [Terraform-Jenkins](terraform_jenkins) - Creating Jenkins Master & Jenkins Slave (EC2 instance slave & cloud slaves)
 + [Terraform-Consul](/terraform_consul) - Creating Consul cluster without application (application will be installed via ansible playbook)
 + [Terraform-EKS](/terraform_eks) - Creating Kubernetes cluster with one worker group
-+ [terraform_bastion_server](/terraform_bastion_server) - Creating Bastion server for debugging & maintenance
++ [Terraform Bastion Server](/terraform_bastion_server) - Creating Bastion server for debugging & maintenance
 > note: Bastion server - In order to avoid security issues we're recommending to destroy the machine or turn it off when not needed
 
 2. After deploying the infrastructure via terraform we will need to provision our servers via Ansible playbooks.
@@ -102,18 +101,12 @@ Jenkins UI : https://jenkins.eran.website/
 | tcp      | 22          | ingress        | Allow ssh                                                      |
 | all      | all         | egress         | Allow all outgoing traffic                                     |
 
-### Project Terraform Deployments 
-- [Terraform-VPC](terraform_vpc) - Creating VPC
-- [Terraform-Jenkins](terraform_jenkins) - Creating Jenkins Master & Jenkins Slave
-- [Terraform-Consul](/terraform_consul) - Creating Consul cluster
-- [Terraform-EKS](/terraform_eks) - Creating EKS
 
-
-### Links for dockerhub related images
+### Links to dockerhub related images
 - [Kandula](https://hub.docker.com/repository/docker/erandocker/ops-school-kandula) - docker pull erandocker/ops-school-kandula:tagname
 - [Jenkins Slave Ubuntu-18.04](https://hub.docker.com/repository/docker/erandocker/jenkins-slave-ubuntu-18.4) - docker pull erandocker/jenkins-slave-ubuntu-18.4:tagname
 - [Jenkins Slave Centos-7](https://hub.docker.com/repository/docker/erandocker/jenkins-slave-docker-centos-7) - docker pull erandocker/jenkins-slave-docker-centos-7:tagname
 
-### Links for GitHub related repository
+### Links to GitHub related repository
 - [Terrafom VPC module](https://github.com/eranmos/ops-school-terraform-aws-vpc.git) - Terraform VPC module for AWS VPC, Subnets, Routing, NAT Gateway creation  
 - [Kandula Application](git@github.com:eranmos/ops-school-kandula-project-app.git) - Code for Kandule Application
