@@ -10,7 +10,7 @@
 - [IP Address Allocation](/network_address_design/network_adresses_design.md)
 - [Deployment Process](#Deployment-Process)
 - [Prerequisites](#prerequisites)
-- [Deploying Instructions](#Deploying-Instructions)
+- [Deployment Instructions](#Deployment-Instructions)
 - [Application Connections](#Application-Connections)
 - [Project Terraform Deployments](#Project-Terraform-Deployments)
 - [Links for dockerhub related images](#Links-for-dockerhub-related-images)
@@ -23,29 +23,41 @@
 ![app_diagram](./ops_school-project_app_diagram.png)
 
 ## Deployment Process
-Infrastructure deployment will be performed via Terraform locally (on my pc).
-Terraform deployment is divided into five parts when the first execution must be VPC and the sequence of rest is not important
- + [Terraform-VPC](terraform_vpc) - Creating VPC
- + [Terraform-Jenkins](terraform_jenkins) - Creating Jenkins Master & Jenkins Slave
- + [Terraform-Consul](/terraform_consul) - Creating Consul cluster
- + [Terraform-EKS](/terraform_eks) - Creating Kubernetes cluster with one worker group
++ Infrastructure deployment via Terraform
++ EC2 instances provisioning & Consul Application installation (Jenkins job that will run Ansible Playbooks)
++ Kandula App deployment on EKS cluster (Jenkins Job)
 
-After deploying the infrastructure via terraform we will need to provision our servers via Ansible playbooks.
+## Prerequisites
+To deploy all infrastructure you will need below application to be installed on your working station
+ + Terraform application (version 1.1.2)
+ + Git
+
+## Deployment Instructions
+Infrastructure deployment will be performed via Terraform locally. 
+1. Terraform deployment is divided into five parts when the first execution must be VPC and the sequence of rest is not important
++ [Terraform-VPC](terraform_vpc) - Creating VPC
++ [Terraform-Jenkins](terraform_jenkins) - Creating Jenkins Master & Jenkins Slave (EC2 instance slave & cloud slaves)
++ [Terraform-Consul](/terraform_consul) - Creating Consul cluster without application (application will be installed via ansible playbook)
++ [Terraform-EKS](/terraform_eks) - Creating Kubernetes cluster with one worker group
++ [terraform_bastion_server](/terraform_bastion_server) - Creating Bastion server for debugging & maintenance
+> note: Bastion server - In order to avoid security issues we're recommending to destroy the machine or turn it off when not needed
+
+2. After deploying the infrastructure via terraform we will need to provision our servers via Ansible playbooks.
 All Ansible playbooks will be run via jenkins job ( Ansible installed on the Jenkins-slave).
 Jenkins UI : https://jenkins.eran.website/
 
+3. Installing Consul-server on three ec2 instances & Consul-agent on Jenkins-master & Jenkins-slave.
+   + please run Jenkins job:
+   + [jenkins file location](/Jenkins/jenkins_jobs/jenkins_ansible_playbooks/common_ansible_playbook.groovy)
+   + [Ansible Playbooks & roles](/ansible)
+   + when done you can access consul GUI and see all consul servers, agents and services, link: https://consul.eran.website/
+
+4. Deploying Kandule Application via Jenkins job.
+    + please run Jenkins Job: 
+    + [jenkins file location](Jenkins/jenkins_jobs/jenkins_kandula_deployment_eks/jenkins_kandula_deployment_eks.groovy)
+    + when done you can access Kandula GUI, Link to Kandula: 
 
 
-
-
-
-
-
-
-
-## Prerequisites
-
-## Deploying Instructions
 
 ## Application Connections
 
