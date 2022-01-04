@@ -2,13 +2,12 @@
 
 This Repo will aggregate my ops-school project
 
-## Who am I
-
 ## Infrastructure architecture diagram
-![architecture_diagram](./ops-school-mid-project.png)
+![architecture_diagram](./ops_school_project_architecture_diagram.png)
+
 
 ## Application diagram
-
+![app_diagram](./ops_school-project_app_diagram.png)
 ## Table of Contents
 
 - [Features](#features)
@@ -23,8 +22,8 @@ This Repo will aggregate my ops-school project
 
 ## Deploying Instructions
 
-### Available Assignments
-- [Terraform-VPC](terraform_vpc) - A deep dive workshop into the different kubernetes controllers, how they work and how to use them.
-- [Terraform-Jenkins](terraform_jenkins) - Deep dive into advanced scheduling techniques
-- [Terraform-Consul](terraform_consul) - Eran
-- [Terraform-EKS](/terraform_eks) - Test
+### Project Terraform Deployments 
+- [Terraform-VPC](terraform_vpc) - Creating VPC
+- [Terraform-Jenkins](terraform_jenkins) - Creating Jenkins Master & Jenkins Slave
+- [Terraform-Consul](/terraform_consul) - Creating Consul cluster
+- [Terraform-EKS](/terraform_eks) - Creating EKS
