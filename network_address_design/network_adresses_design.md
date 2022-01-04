@@ -10,7 +10,7 @@
 * Last Usable IP: 10.0.7.254
 * Count: 2048
 
-## <span style="color:red">Address Allocation :</span>
+## <span style="color:red">Address Allocation</span>
 
 ### <span style="color:red">Availability Zone A</span>
 + <span style="color:red">Public Subnet-1:</span>
