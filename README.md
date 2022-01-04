@@ -7,6 +7,7 @@
 
 - [Infrastructure architecture diagram](#Infrastructure-architecture-diagram)
 - [Application diagram](#Application-diagram)
+- [IP Address Allocation](#/network_address_design/network_adresses_design.md)
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Deploying Instructions](#deploying-instructions)
