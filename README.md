@@ -1,9 +1,8 @@
-![test image size]<img src="./ops-school-mid-project.png" width="400" height="790">
 
-![kubernetes!](./OpsSchool_really_small.png)
+![kubernetes!](./OpsSchool_really_small.png){}
+<p align="center"><img width="250px" src="./OpsSchool_really_small.png"></p>
 
-<img src="ops-school-mid-project.png" width="150" height="280">
-
+![image](./OpsSchool_really_small.png = 250x250)
 This Repo will aggregate my ops-school mid project
 
 ## Who am I
