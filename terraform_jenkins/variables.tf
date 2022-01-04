@@ -69,7 +69,7 @@ variable "jenkins_dns" {
 }
 
 variable "default_s3_bucket" {
-  description = "AWS EC2 Instance type"
+  description = "AWS s3 bucket for provisioning "
   default     = "eran-terraform-state-bucket"
 }
 
